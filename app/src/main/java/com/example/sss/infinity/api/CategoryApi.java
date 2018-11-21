@@ -1,6 +1,7 @@
 package com.example.sss.infinity.api;
 
 import com.example.sss.infinity.models.AllCategory;
+import com.example.sss.infinity.models.Status;
 import com.example.sss.infinity.models.SubCategory;
 
 import java.util.List;
@@ -15,4 +16,7 @@ public interface CategoryApi {
 
     @GET("productlist.php")
     Call<SubCategory> getRelatedSubCategory(@Query("category_name") String categoryName);
+
+    @GET("products_status.php")
+    Call<Status> getStatusForChange();
 }
